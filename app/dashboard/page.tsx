@@ -13,7 +13,7 @@ export default async function DashboardPage() {
       ctaLabel="+ SUBMIT PROOF"
       ctaClass="pixel-btn pixel-btn-green"
     >
-      <div className="dash-grid">
+      <div className="grid grid-cols-3 gap-6 mb-6 max-[900px]:grid-cols-1">
         <div className="stat-card">
           <div style={{ fontSize: 36 }}>🪙</div>
           <div className="stat-num">{user.totalCoins.toLocaleString()}</div>
@@ -31,7 +31,7 @@ export default async function DashboardPage() {
         </div>
       </div>
 
-      <div className="dash-grid" style={{ gridTemplateColumns: "2fr 1fr" }}>
+      <div className="grid grid-cols-[2fr_1fr] gap-6 mb-6 max-[900px]:grid-cols-1">
         <div className="panel">
           <h2>📜 MISSION HISTORY (LAST 5)</h2>
           <ul className="history-list">
@@ -51,7 +51,7 @@ export default async function DashboardPage() {
 
         <div className="panel">
           <h2>🎖 BADGES</h2>
-          <div className="badges">
+          <div className="flex flex-wrap gap-3.5">
             {user.badges.map((badge) => (
               <div
                 key={badge.id}
@@ -67,7 +67,7 @@ export default async function DashboardPage() {
 
       <div className="panel">
         <h2>⭐ ACTIVE QUESTS</h2>
-        <div className="mission-grid">
+        <div className="grid gap-5 grid-cols-[repeat(auto-fit,minmax(280px,1fr))] max-[900px]:grid-cols-1">
           {activeMissions.map((mission) => (
             <div className="mission-card" key={mission.id}>
               <div className="top">

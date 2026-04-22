@@ -46,7 +46,7 @@ export default function AdminLeaderboardPage() {
       ctaLabel="← BACK"
       ctaClass="pixel-btn pixel-btn-blue"
     >
-      <div className="tabs" role="tablist" aria-label="Leaderboard view">
+      <div className="flex" role="tablist" aria-label="Leaderboard view">
         <button
           type="button"
           className={`tab ${view === "admin" ? "active" : ""}`}

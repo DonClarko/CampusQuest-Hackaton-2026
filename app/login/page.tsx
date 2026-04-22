@@ -7,7 +7,7 @@ export default function LoginPage() {
   return (
     <>
       <Sky full />
-      <main className="auth-wrap">
+      <main className="relative z-[1] min-h-[calc(100vh-80px)] flex flex-col items-center justify-center px-6 pt-10 pb-20">
         <Link href="/" className="auth-logo">
           <span className="coin-icon" />
           <span className="logo-text">
@@ -21,36 +21,23 @@ export default function LoginPage() {
             <p>Choose your player to log in</p>
           </div>
 
-          <div className="role-grid">
-            <button type="button" className="role-card" data-role="student" aria-pressed="true">
-              <div className="role-icon">🍄</div>
-              <div className="role-name">STUDENT</div>
-              <div className="role-desc">Take quests, earn coins, climb ranks.</div>
-            </button>
-            <button type="button" className="role-card" data-role="admin">
-              <div className="role-icon">👑</div>
-              <div className="role-name">ADMIN</div>
-              <div className="role-desc">Post missions, set rewards, verify proof.</div>
-            </button>
-          </div>
-
-          <form className="form-grid auth-form">
-            <div className="field full">
+          <form className="grid grid-cols-2 gap-4 max-[900px]:grid-cols-1">
+            <div className="field col-span-full">
               <label htmlFor="auth-id">SCHOOL ID / USERNAME</label>
               <input id="auth-id" type="text" placeholder="e.g. 2026-00001" autoComplete="username" />
             </div>
-            <div className="field full">
+            <div className="field col-span-full">
               <label htmlFor="auth-pw">PASSWORD</label>
               <input id="auth-pw" type="password" placeholder="••••••••" autoComplete="current-password" />
             </div>
-            <div className="field full auth-options">
+            <div className="field col-span-full auth-options">
               <label className="auth-check">
                 <input type="checkbox" defaultChecked /> Remember me
               </label>
               <Link href="#" className="auth-forgot">Forgot password?</Link>
             </div>
 
-            <div className="inline-actions full auth-actions">
+            <div className="col-span-full flex flex-wrap gap-3 justify-end mt-2.5 auth-actions">
               <Link href="/dashboard" className="pixel-btn pixel-btn-green big">
                 ▶ ENTER AS STUDENT
               </Link>
@@ -59,8 +46,8 @@ export default function LoginPage() {
               </Link>
             </div>
 
-            <p className="auth-foot full">
-              No account yet? <Link href="#" className="auth-link">Sign up</Link> · or
+            <p className="col-span-full text-center text-sm text-[var(--text-dark)] mt-2">
+              No account yet? <Link href="/signup" className="auth-link">Sign up</Link> · or
               {" "}<Link href="/" className="auth-link">return to title screen</Link>
             </p>
           </form>

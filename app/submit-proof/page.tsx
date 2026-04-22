@@ -18,12 +18,12 @@ export default function SubmitProofPage() {
             CONTEST
           </span>
         </h2>
-        <p className="muted-note">
+        <p className="text-[18px] mb-[18px]">
           Required: 1 team photo, code repo link, 200-word summary, event code.
         </p>
-        <form className="form-grid" encType="multipart/form-data">
+        <form className="grid grid-cols-2 gap-5 max-[900px]:grid-cols-1" encType="multipart/form-data">
           <input type="hidden" name="missionId" value="m-4" />
-          <div className="field full">
+          <div className="field col-span-full">
             <label htmlFor="proof-file">📷 PHOTO EVIDENCE</label>
             <label className="file-drop" htmlFor="proof-file">
               DROP IMAGE HERE OR CLICK TO UPLOAD
@@ -32,7 +32,7 @@ export default function SubmitProofPage() {
             </label>
             <input id="proof-file" name="photo" type="file" accept="image/*" hidden />
           </div>
-          <div className="field full">
+          <div className="field col-span-full">
             <label htmlFor="summary">TEXT SUMMARY</label>
             <textarea
               id="summary"
@@ -48,7 +48,7 @@ export default function SubmitProofPage() {
             <label htmlFor="link">LINK (OPTIONAL)</label>
             <input id="link" name="linkUrl" type="url" placeholder="https://github.com/..." />
           </div>
-          <div className="inline-actions full">
+          <div className="col-span-full flex gap-3.5 justify-end mt-2.5">
             <Link href="/missions" className="pixel-btn">
               CANCEL
             </Link>

@@ -41,7 +41,7 @@ export default async function AdminVerifyQueuePage() {
                 &quot;{submission.summary}&quot;
               </p>
             </div>
-            <div className="actions">
+            <div className="flex flex-col gap-2 actions">
               <button type="button" className="pixel-btn pixel-btn-green">✔ APPROVE</button>
               <button type="button" className="pixel-btn pixel-btn-red">✖ REJECT</button>
             </div>

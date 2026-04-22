@@ -19,7 +19,7 @@ export default async function LeaderboardPage() {
       ctaLabel="← BACK"
       ctaClass="pixel-btn pixel-btn-blue"
     >
-      <div className="tabs">
+      <div className="flex">
         <span className="tab active">👤 INDIVIDUAL</span>
         <span className="tab">🏛 DEPARTMENT</span>
       </div>

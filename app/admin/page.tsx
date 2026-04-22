@@ -22,13 +22,13 @@ export default async function AdminDashboardPage() {
       ctaLabel="+ POST MISSION"
       ctaClass="pixel-btn pixel-btn-green"
     >
-      <div className="dash-grid">
+      <div className="grid grid-cols-3 gap-6 mb-6 max-[900px]:grid-cols-1">
         <StatCard icon="🎯" value={dashboard.stats.liveMissions} label="LIVE MISSIONS" tone="success" />
         <StatCard icon="📥" value={dashboard.stats.pendingVerify} label="PENDING VERIFY" tone="danger" />
         <StatCard icon="🍄" value={dashboard.stats.activeStudents.toLocaleString()} label="ACTIVE STUDENTS" tone="coin" />
       </div>
 
-      <div className="dash-grid" style={{ gridTemplateColumns: "2fr 1fr" }}>
+      <div className="grid grid-cols-[2fr_1fr] gap-6 mb-6 max-[900px]:grid-cols-1">
         <div className="panel">
           <h2>📥 RECENT SUBMISSIONS</h2>
           <ul className="history-list">
@@ -41,7 +41,7 @@ export default async function AdminDashboardPage() {
               </li>
             ))}
           </ul>
-          <div className="inline-actions" style={{ marginTop: 16 }}>
+          <div className="flex gap-3.5 justify-end mt-4">
             <Link href="/admin/verify-queue" className="pixel-btn pixel-btn-blue">
               → OPEN VERIFY QUEUE
             </Link>
@@ -69,7 +69,7 @@ export default async function AdminDashboardPage() {
 
       <div className="panel">
         <h2>🎯 LIVE MISSIONS</h2>
-        <div className="mission-grid">
+        <div className="grid gap-5 grid-cols-[repeat(auto-fit,minmax(280px,1fr))] max-[900px]:grid-cols-1">
           {dashboard.liveMissions.map((mission) => (
             <div className="mission-card" key={mission.id}>
               <div className="top">

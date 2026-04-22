@@ -66,7 +66,7 @@ export function MissionFeed({
         {tier && <span className="tag-pill">{tier.toUpperCase()}</span>}
       </div>
 
-      <div className="mission-grid">
+      <div className="grid gap-5 grid-cols-[repeat(auto-fit,minmax(280px,1fr))] max-[900px]:grid-cols-1">
         {filtered.map((mission) => (
           <div className="mission-card" key={mission.id}>
             <div className="top">
@@ -91,7 +91,7 @@ export function MissionFeed({
         )}
       </div>
 
-      <div className="inline-actions">
+      <div className="flex gap-3.5 justify-end mt-2.5">
         <Link href="/submit-proof" className="pixel-btn pixel-btn-green">▶ SUBMIT PROOF</Link>
       </div>
     </>

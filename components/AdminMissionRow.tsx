@@ -26,7 +26,7 @@ export function AdminMissionRow({
   return (
     <div className="admin-mission-row">
       <div className="amr-main">
-        <div className="amr-tags">
+        <div className="flex gap-2 flex-wrap mb-2.5">
           <span className={`tier-badge ${tier}`}>{tier}</span>
           <span className="sdg-badge">{sdg}</span>
           <span
@@ -42,7 +42,7 @@ export function AdminMissionRow({
       <div className="amr-side">
         <div className="amr-count">{participants}</div>
         <div className="amr-count-label">PLAYERS</div>
-        <div className="amr-actions">
+        <div className="flex gap-2 mt-1.5">
           <button type="button" className="pixel-btn pixel-btn-blue">EDIT</button>
           <button type="button" className="pixel-btn pixel-btn-red">END</button>
         </div>
